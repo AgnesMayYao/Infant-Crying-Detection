@@ -1,7 +1,7 @@
 #Author Name: Xuewen Yao
 #X. Yao, M. Micheletti, M. Johnson, E. Thomaz, and K. de Barbaro, "Infant Crying Detection in Real-World Environments," in ICASSP 2022 (Accepted)
 #Expected input is an audio file (audio file format tested is waveform audio file at 22050Hz)
-#Output is a CSV file with two columns (start_time, end_time) of data that have signals with frequency higher than 350 Hz
+#Output is a CSV file with two columns (start_time, end_time) of data that have signals with frequency higher than 350 Hz (potential infant crying)
 
 import librosa
 import os
@@ -141,6 +141,8 @@ for ind, item in enumerate(predictions):
 if begin:
 	output.append([start_time, len(predictions)])
 
+
+##write output into a file
 print(output)
 with open(output_file, 'w', newline = '') as f:
     writer = csv.writer(f)
