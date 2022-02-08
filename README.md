@@ -6,7 +6,7 @@ X. Yao, M. Micheletti, M. Johnson, E. Thomaz, and K. de Barbaro, "Infant Crying 
 
 
 ## Models and Main Package Versions
-Trained deep spectrum model can be found at: https://utexas.box.com/s/64ecwy5wo0zzla4sax3j30dog0f4k8kv  
+Trained deep spectrum model can be found at: https://utexas.box.com/s/poe7i9p9lzs6rg7yer85y2m9wh247lz0
 Trained SVM model is in this repository: svm.joblib  
 
 ### Versions
