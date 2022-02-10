@@ -6,12 +6,12 @@ X. Yao, M. Micheletti, M. Johnson, E. Thomaz, and K. de Barbaro, "Infant Crying 
 
 
 ## Models and Main Package Versions
-Trained deep spectrum model can be found at: https://utexas.box.com/s/poe7i9p9lzs6rg7yer85y2m9wh247lz0
+Trained deep spectrum model can be found at: https://utexas.box.com/s/poe7i9p9lzs6rg7yer85y2m9wh247lz0. 
 Trained SVM model is in this repository: svm.joblib  
 
 ### Versions
 python3/3.6.3  
-tensorflow-gpu==1.13.2  
+tensorflow-gpu==1.15.0  
 scikit-learn==0.23.0   
 pyAudioAnalysis==0.3.7  
 librosa==0.8.1  
