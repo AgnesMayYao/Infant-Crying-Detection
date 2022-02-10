@@ -19,21 +19,21 @@ def whatIsAnEvent(data, event_thre):
 		   event_thre: the minimun threshold for an event (continuous 1s) to be kept in the output 
 	Output: data with continous 1s shorter than event_thre changeed to 0s
 	'''
-    previous = (-1, -1)
-    start = (-1, -1)
-    for i in range(len(data)):
-        if data[i, 1] == 1 and previous[1] == -1:
-            previous = (i, data[i, 0])
-        elif data[i, 1] == 0 and previous[1] != -1 and data[i - 1, 1] == 1:
-            start = (i, data[i, 0])
-            if start[1] - previous[1] <= event_thre:
-                data[previous[0] : start[0], 1] = 0
-            previous = (-1, -1)
-            start = (-1, -1)
+	previous = (-1, -1)
+	start = (-1, -1)
+	for i in range(len(data)):
+	    if data[i, 1] == 1 and previous[1] == -1:
+	        previous = (i, data[i, 0])
+	    elif data[i, 1] == 0 and previous[1] != -1 and data[i - 1, 1] == 1:
+	        start = (i, data[i, 0])
+	        if start[1] - previous[1] <= event_thre:
+	            data[previous[0] : start[0], 1] = 0
+	        previous = (-1, -1)
+	        start = (-1, -1)
 
-    if previous[1] != -1 and data[-1, 0] - previous[1] + 1 <= event_thre:
-        data[previous[0] :, 1] = 0
-    return data
+	if previous[1] != -1 and data[-1, 0] - previous[1] + 1 <= event_thre:
+	    data[previous[0] :, 1] = 0
+	return data
 
 
 def combineIntoEvent(data, time_thre):
@@ -43,18 +43,18 @@ def combineIntoEvent(data, time_thre):
 		   time_thre: the maximun threshold for neighbouring events (continuous 1s) to be combined in the output (0s between them become 1s)
 	Output: data with continous 0s shorter than time_thre changed to 1s
 	'''
-    previous = (-1, -1)
-    for i in range(len(data)):
-        if data[i, 1] == 1:
-            start = (i, data[i, 0])
-            if previous[1] > 0 and start[1] - previous[1] <= time_thre:
-                data[previous[0] : start[0], 1] = 1
-            previous = start
+	previous = (-1, -1)
+	for i in range(len(data)):
+	    if data[i, 1] == 1:
+	        start = (i, data[i, 0])
+	        if previous[1] > 0 and start[1] - previous[1] <= time_thre:
+	            data[previous[0] : start[0], 1] = 1
+	        previous = start
 
-    if previous[1] > 0 and data[i - 1, 0] - previous[1] <= time_thre:
-        data[previous[0] : i, 1] = 1
+	if previous[1] > 0 and data[i - 1, 0] - previous[1] <= time_thre:
+	    data[previous[0] : i, 1] = 1
 
-    return data
+	return data
 
 
 
