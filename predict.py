@@ -84,7 +84,7 @@ output_file = "predictions.csv"
 
 
 ##trained models
-#deep_spectrum.h5 can be found at https://utexas.box.com/s/64ecwy5wo0zzla4sax3j30dog0f4k8kv
+#deep_spectrum.h5 can be found at https://utexas.app.box.com/s/poe7i9p9lzs6rg7yer85y2m9wh247lz0
 #deep_spectrum.h5 is a complete AlexNet, but we use the second-to-last layer as deep spectrum features instead of the last prediction layer
 saved_model1 = load_model('deep_spectrum.h5')
 model1 = Sequential()
