@@ -2,8 +2,9 @@
 This repository contains code to run an infant crying detection model for continuous audio in real-world environments, as described in this [paper](https://arxiv.org/abs/2005.07036).
 
 ## Citation Information
-X. Yao, M. Micheletti, M. Johnson, E. Thomaz, and K. de Barbaro, "Infant Crying Detection in Real-World Environments," in ICASSP 2022 
-M. Micheletti, X. Yao, M. Johnson, and K. de Barbaro, "Validating a Model to Detect Infant Crying from Naturalistic Audio," in Behavior Research Methods 2022
+1. X. Yao, M. Micheletti, M. Johnson, E. Thomaz, and K. de Barbaro, "Infant Crying Detection in Real-World Environments," in ICASSP 2022 
+
+2. M. Micheletti, X. Yao, M. Johnson, and K. de Barbaro, "Validating a Model to Detect Infant Crying from Naturalistic Audio," in Behavior Research Methods 2022
 
 
 
